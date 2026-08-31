@@ -208,4 +208,41 @@ a {
 	border-radius: 10px;
 }
 
+.testimonials {
+	background-color: white;
+	width: 100%;
+	min-height: 520px;
+	margin: 20px 0;
+}
 
+.testimonials h3 {
+	font-size: 1.2rem;
+	text-align: center;
+	padding: 10px;
+}
+
+.testimonial-block {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	margin: 20px 0;
+}
+
+.quote-icon {
+	display: flex;
+	justify-content: flex-start;
+	font-size: 1.5rem;
+	color: rgba(255, 255, 255, 0.568);
+}
+
+.testimonial {
+	border-left: 5px solid rgb(26, 9, 25);
+	border-radius: 5px;
+	color: rgb(26, 9, 25);
+	background-color: rgb(231, 210, 231);
+	padding: 5px 20px;
+	margin: 10px;
+	text-align: center;
+	display: flex;
+	box-shadow: 
+}
