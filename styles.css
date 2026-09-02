@@ -115,6 +115,12 @@ a {
 	padding-bottom: 10px;
 }
 
+.top-products h2 {
+	color: rgb(63, 22, 60);
+	padding : 10px 0;
+	text-align: center;
+}
+
 .product-list {
 	display: flex;
 	flex-wrap: wrap;
@@ -122,16 +128,11 @@ a {
 	margin: 10px;
 }
 
-.product-list h2 {
-	color: rgb(63, 22, 60);
-	padding : 10px 0;
-}
-
 .product {
 	border: 0.5px solid gray;
 	flex: 1 1 300px;
 	max-width: 280px;
-	min-height: 310px;
+	min-height: 280px;
 	margin: 10px;
 	border-radius: 10px;
 	overflow: hidden;
@@ -143,16 +144,14 @@ a {
 	width: 280px;
 }
 
-.product .product-type {
-	font-size: 1.2rem;
-	padding-left: 10px;
-	padding-bottom: 10px;
-}
-
 .product .price-block {
 	display: flex;
 	justify-content: space-between;
-	margin-right: 10px;
+	padding: 10px;
+}
+
+.product .product-type {
+	font-size: 1.2rem;
 }
 
 .product .price {
@@ -162,13 +161,28 @@ a {
 	padding-left: 10px;
 }
 
-.product .buy-btn {
-	background-color: rgb(165, 50, 110);
-	color: white;
-	text-decoration: none;
-	padding: 5px 8px;
-	border-radius: 20px;
+.explore-btn-con {
+	text-align: center;
 }
+
+.explore-btn {
+	color: white;
+	background-color: purple;
+	padding: 6px 70px;
+	border-radius: 5px;
+	font-weight: 700;
+	margin-bottom: 20px;
+	transition: 0.5s ease;
+}
+
+.explore-btn:hover {
+	background-color: rgb(170, 10, 170);
+}
+
+.arrow-icon {
+	padding-left: 10px;
+}
+
 
 .descrip {
 	padding: 20px;
@@ -283,6 +297,7 @@ footer {
 
 .email-block {
 	text-align: center;
+	margin-top: 20px;
 }
 
 .email {
