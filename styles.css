@@ -25,6 +25,12 @@ a {
 	text-decoration: none;
 }
 
+a:focus-visible {
+	outline: 1px solid var(--DarkPurple);
+	outline-offset: 2px;
+	border-radius: 5px;
+}
+
 header {
 	background-color: var(--DarkPurple);
 	min-height: 30px;
