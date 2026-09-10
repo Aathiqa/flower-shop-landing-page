@@ -623,3 +623,51 @@ footer {
 	border-radius: 10px;
 	text-align: center;
 }
+
+.bg-contact {
+	background-color: var(--BabyPurple);
+	height: 600px;
+	margin: 20px 20px 0;
+	padding: 20px;
+	border: 2px solid var(--Purple);
+}
+
+.bg-contact .contact-text {
+	text-align: center;
+}
+
+main h1 {
+	color: var(--White);
+	font-size: 1.4rem;
+	padding: 20px;
+	text-align: center;
+}
+
+main span {
+	color: var(--BabyPurple);
+}
+
+.email-details, .whatsapp-details {
+	background-color: var(--DarkPurple);
+	color: var(--White);
+	/* font-size: 0.9rem; */
+	max-width: 200px;
+	min-height: 100px;
+	margin: 20px 0;
+	padding: 10px 0 10px 10px;;
+}
+
+.contact-icons {
+	font-size: 2.2rem;
+	display: inline-block;
+}
+
+.email-details h2, .whatsapp-details h2 {
+	font-size: 1.3rem;
+	color: var(--BabyPurple);
+}
+
+.email-details p {
+	display: inline-block;	
+	font-size: 0.9rem;
+}
