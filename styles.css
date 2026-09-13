@@ -34,6 +34,9 @@ a:focus-visible {
 header {
 	background-color: var(--DarkPurple);
 	min-height: 30px;
+	display: flex;
+	justify-content: space-between;
+	/* align-items: center; */
 }
 
 nav{
@@ -50,11 +53,11 @@ nav{
 	margin-left: auto;
 	position: relative;
 	z-index: 10;
-	margin-right: 10px;
+	margin-left: 10px;
 }
 
 .ham-menu span {
-	background-color: var(--Purple);
+	background-color: var(--White);
 	height: 3px;
 	width: 100%;
 	border-radius: 20px;
@@ -90,6 +93,14 @@ nav{
 	/* color: var(--DarkPurple); */
 }
 
+.cart-icon {
+	color: var(--White);
+	font-size: 1.8rem;
+	margin: 15px;
+	display: inline-block;
+}
+
+
 .off-screen-menu {
 	background-color: var(--White);
 	color: var(--DarkPurple);
@@ -98,7 +109,7 @@ nav{
 	top: 0;
 	right: -100%;
 	width: 100%;
-	max-width: 270px;
+	max-width: 200px;
 	height: 100vh;
 	display: flex;
   justify-content: center;
