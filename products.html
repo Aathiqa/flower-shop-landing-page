@@ -3,11 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+		rel="stylesheet"/>
   <link rel="stylesheet" href="styles.css">
 	<title>Products</title>
 </head>
 <body>
+	<header>
+    <nav>
+      <div class="ham-menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+    </nav>
+		<div id="cart_icon">
+			<i class="ri-shopping-cart-2-fill cart-icon"></i>
+			<span class="cart-item-count"></span>
+		</div>
+  </header>
+	<div class="cart">
+		<h2 class="cart-title"></h2>
+		<div class="cart-content"></div>
+	</div>
   <main class="bg-products">
+		<div class="off-screen-menu">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Shop</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</div>
 		<h1>Our Specialty</h1>
 		<div class="product-catalog">
 			<div class="product">
@@ -92,5 +119,6 @@
 			</div>
 		</div>
   </main>
+	<script src="script.js"></script>
 </body>
 </html>
