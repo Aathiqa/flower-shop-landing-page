@@ -150,6 +150,10 @@ nav{
 	padding: 0; */
 }
 
+.cart-remove {
+	cursor: pointer;
+}
+
 .price-block {
 	display: flex;
 	justify-content: space-between;
@@ -158,6 +162,26 @@ nav{
 .product-quantity {
 	display: flex;
 	justify-content: space-between;
+	font-size: 1rem;
+	border: 1px solid gray;
+	border-radius: 5px;
+	margin: 10px 0;
+}
+
+.product-quantity button {
+	cursor: pointer;
+	border: none;
+	background-color: inherit;
+}
+
+.product-quantity .actual-amount {
+	padding: 0 10px;
+	border-left: 1px solid gray;
+	border-right: 1px solid gray;
+}
+
+#increment, #decrement {
+	padding: 0 5px;
 }
 
 .off-screen-menu {

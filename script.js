@@ -53,9 +53,9 @@ const addToCart = productBox => {
 				<i class="ri-delete-bin-6-line cart-remove"></i>
 			</div>
 			<div class="product-quantity">
-				<p id="decrement">-</p>
-				<p class="actual-amount">1</p>
-				<p id="increment">+</p>
+				<button id="decrement">-</button>
+				<button class="actual-amount">1</button>
+				<button id="increment">+</button>
 			</div>
 		</div>
   `;
@@ -75,12 +75,12 @@ const addToCart = productBox => {
 
 		if (event.target.id === "decrement" && quantity > 1){
 			quantity--;
-			// if (quantity === 1){
-			// 	decrementButton.computedStyleMap.color = "#999";
-			// }
+			if (quantity === 1){
+				decrementButton.style.color = "#999";
+			}
 		} else if (event.target.id === "increment"){
 			quantity++;
-			// decrementButton.computedStyleMap.color = "#333";
+			decrementButton.style.color = "#333";
 		}
 
 		number.textContent = quantity;
