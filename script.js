@@ -32,6 +32,16 @@ const addToCart = productBox => {
 	const productTitle = productBox.querySelector(".product-name").textContent;
 	const productPrice = productBox.querySelector(".product-price").textContent;
 
+
+	const cartItems = cartContent.querySelectorAll(".product-title");
+	for (let item of cartItems) {
+		if (item.textContent === productTitle){
+			alert("This item is already in the cart.");
+			return;
+		}
+	}
+
+
   const cartBox = document.createElement("div");
   cartBox.classList.add("cart-box");
   cartBox.innerHTML = `
@@ -42,14 +52,41 @@ const addToCart = productBox => {
 				<p class="price">${productPrice}</p>
 				<i class="ri-delete-bin-6-line cart-remove"></i>
 			</div>
-			<div class="product-amount">
-				<p class="decrement">-</p>
+			<div class="product-quantity">
+				<p id="decrement">-</p>
 				<p class="actual-amount">1</p>
-				<p class="increment">+</p>
+				<p id="increment">+</p>
 			</div>
 		</div>
   `;
 
 	cartContent.appendChild(cartBox);
+
+
+	cartBox.querySelector(".cart-remove").addEventListener("click", () => {
+		cartBox.remove();
+	});
+
+
+	cartBox.querySelector(".product-quantity").addEventListener("click", event => {
+		const number = cartBox.querySelector(".actual-amount");
+		const decrementButton = cartBox.querySelector("#decrement");
+		let quantity = number.textContent;
+
+		if (event.target.id === "decrement" && quantity > 1){
+			quantity--;
+			// if (quantity === 1){
+			// 	decrementButton.computedStyleMap.color = "#999";
+			// }
+		} else if (event.target.id === "increment"){
+			quantity++;
+			// decrementButton.computedStyleMap.color = "#333";
+		}
+
+		number.textContent = quantity;
+
+		// updateTotalPrice();
+		
+	});
 
 };
