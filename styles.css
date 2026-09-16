@@ -98,6 +98,22 @@ nav{
 	font-size: 1.8rem;
 	margin: 15px;
 	display: inline-block;
+	position: relative;
+}
+
+.cart-item-count {
+	background-color: var(--Purple);
+	color: var(--White);
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	position: absolute;
+	top: 8px;
+	right: 6px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 0.8rem;
 }
 
 .cart {
@@ -182,6 +198,10 @@ nav{
 
 #increment, #decrement {
 	padding: 0 5px;
+}
+
+#decrement {
+	color: #999;
 }
 
 .off-screen-menu {

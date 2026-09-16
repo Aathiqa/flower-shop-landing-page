@@ -62,13 +62,18 @@ const addToCart = productBox => {
 
 	cartContent.appendChild(cartBox);
 
+	// // ensure the decrement button looks disabled when quantity is 1
+	// const decrementButtonInit = cartBox.querySelector("#decrement");
+	// if (decrementButtonInit) decrementButtonInit.style.color = "#999";
 
 	cartBox.querySelector(".cart-remove").addEventListener("click", () => {
 
 		cartBox.remove();
 
+		updateCartCount(-1);
+
 		updateCartTotal();
-		
+			
 	});
 
 
@@ -93,6 +98,8 @@ const addToCart = productBox => {
 		
 	});
 
+	updateCartCount(1);
+
 	updateCartTotal();
 
 };
@@ -110,4 +117,17 @@ const updateCartTotal = () => {
 		total += price * quantity;
 	});
 	totalPrice.textContent = `$${total}`;
+};
+
+let cartItemCount = 0;
+const updateCartCount = change => {
+	const cartItemCountBadge = document.querySelector(".cart-item-count");
+	cartItemCount += change;
+	if (cartItemCount > 0) {
+		cartItemCountBadge.style.visibility = "visible";
+		cartItemCountBadge.textContent = cartItemCount;
+	} else {
+		cartItemCountBadge.style.visibility = "hidden";
+		cartItemCountBadge.textContent = "";
+	}
 };
