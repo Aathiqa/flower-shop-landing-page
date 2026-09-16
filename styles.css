@@ -204,6 +204,19 @@ nav{
 	color: #999;
 }
 
+.buy-btn {
+	background-color: var(--DarkPurple);
+	color: var(--White);
+	padding: 6px 12px;
+	border-radius: 12px;
+	border: none;
+	transition: 0.5s ease;
+}
+
+.buy-btn:hover {
+	background-color: var(--Purple);
+}
+
 .off-screen-menu {
 	background-color: var(--White);
 	color: var(--DarkPurple);

@@ -131,3 +131,21 @@ const updateCartCount = change => {
 		cartItemCountBadge.textContent = "";
 	}
 };
+
+const buyNowBtn = document.querySelector(".buy-btn");
+buyNowBtn.addEventListener("click", () => {
+	const cartBoxes = cartContent.querySelectorAll(".cart-box");
+	if (cartBoxes.length ===0) {
+		alert("Your cart is empty. Please add items to your cart before buying.");
+		return;
+	}
+
+	cartBoxes.forEach(cartBox => cartBox.remove());
+
+	cartItemCount = 0;
+	updateCartCount(0);
+	updateCartTotal();
+
+	alert("Thank you for your purchase!");
+
+})
