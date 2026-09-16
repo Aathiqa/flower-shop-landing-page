@@ -64,7 +64,11 @@ const addToCart = productBox => {
 
 
 	cartBox.querySelector(".cart-remove").addEventListener("click", () => {
+
 		cartBox.remove();
+
+		updateCartTotal();
+		
 	});
 
 
@@ -85,8 +89,25 @@ const addToCart = productBox => {
 
 		number.textContent = quantity;
 
-		// updateTotalPrice();
+		updateCartTotal();
 		
 	});
 
+	updateCartTotal();
+
+};
+
+const updateCartTotal = () => {
+	const totalPrice = document.querySelector(".total-price");
+	const cartBoxes = cartContent.querySelectorAll(".cart-box");
+	let total = 0;
+
+	cartBoxes.forEach(cartBox => {
+		const quantityElement = cartBox.querySelector(".actual-amount");
+		const priceElement = cartBox.querySelector(".price");
+		const price = priceElement.textContent.replace("$", "");
+		const quantity = quantityElement.textContent;
+		total += price * quantity;
+	});
+	totalPrice.textContent = `$${total}`;
 };
