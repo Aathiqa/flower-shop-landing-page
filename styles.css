@@ -204,7 +204,7 @@ nav{
 	color: #999;
 }
 
-.buy-btn {
+.final-order-btn {
 	background-color: var(--DarkPurple);
 	color: var(--White);
 	padding: 6px 12px;

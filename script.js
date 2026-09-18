@@ -73,6 +73,8 @@ const addToCart = productBox => {
 		updateCartCount(-1);
 
 		updateCartTotal();
+
+		saveCartToStorage();
 			
 	});
 
@@ -95,6 +97,8 @@ const addToCart = productBox => {
 		number.textContent = quantity;
 
 		updateCartTotal();
+
+		saveCartToStorage();
 		
 	});
 
@@ -132,10 +136,10 @@ const updateCartCount = change => {
 	}
 };
 
-const buyNowBtn = document.querySelector(".buy-btn");
+const buyNowBtn = document.querySelector(".final-order-btn");
 buyNowBtn.addEventListener("click", () => {
 	const cartBoxes = cartContent.querySelectorAll(".cart-box");
-	if (cartBoxes.length ===0) {
+	if (cartBoxes.length === 0) {
 		alert("Your cart is empty. Please add items to your cart before buying.");
 		return;
 	}
@@ -148,4 +152,7 @@ buyNowBtn.addEventListener("click", () => {
 
 	alert("Thank you for your purchase!");
 
-})
+});
+
+
+
