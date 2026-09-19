@@ -213,7 +213,7 @@ nav{
 	transition: 0.5s ease;
 }
 
-.buy-btn:hover {
+.final-order-btn:hover {
 	background-color: var(--Purple);
 }
 
@@ -261,6 +261,8 @@ nav{
 .headline {
 	color: rgb(221, 209, 216);
 	font-size: 1.5rem;
+	text-align: left;
+	padding: 10px;
 }
 
 .headline span {
