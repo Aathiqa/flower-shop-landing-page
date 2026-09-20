@@ -344,23 +344,25 @@ nav{
 	color: rgb(63, 22, 60);
 	padding : 10px 0;
 	text-align: center;
+	font-size: 1.2rem;
 }
 
 .product-list {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	margin: 10px;
+	font-family: "Montserrat", sans-serif;
 }
 
 .product {
 	border: 0.5px solid gray;
 	flex: 1 1 300px;
 	max-width: 280px;
-	min-height: 280px;
+	min-height: 270px;
 	margin: 10px;
 	border-radius: 10px;
 	overflow: hidden;
+	box-shadow: 1px 2px 8px black;
 }
 
 .product img {
@@ -376,13 +378,15 @@ nav{
 }
 
 .product .product-type {
-	font-size: 1.2rem;
+	font-size: 1.1rem;
+	font-weight: 500;
+	color: var(--DarkPurple);
 }
 
 .product .price {
 	color: green;
 	font-size: 1rem;
-	font-weight: 900;
+	font-weight: 700;
 	padding-left: 10px;
 }
 
@@ -393,10 +397,11 @@ nav{
 .explore-btn {
 	color: white;
 	background-color: purple;
-	padding: 6px 70px;
+	padding: 10px 70px;
 	border-radius: 5px;
 	font-weight: 700;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
+	display: inline-block;
 	transition: 0.5s ease;
 }
 
@@ -410,9 +415,9 @@ nav{
 	text-align: center;
 }
 
-.descrip h3 {
+.descrip h2 {
 	color: rgb(202, 157, 202);
-	font-size: 1.3rem;
+	font-size: 1.2rem;
 	margin-bottom: 10px;
 }
 
@@ -447,13 +452,13 @@ nav{
 	background-color: white;
 	width: 100%;
 	min-height: 520px;
-	margin: 20px 0;
+	/* margin: 20px 0; */
 }
 
-.testimonials h3 {
+.testimonials h2 {
 	font-size: 1.2rem;
 	text-align: center;
-	padding: 10px;
+	padding: 15px;
 }
 
 .testimonials span {
@@ -463,15 +468,7 @@ nav{
 .testimonial-block {
 	display: flex;
 	flex-direction: column;
-	gap: 5px;
-	margin: 20px 0;
-}
-
-.quote-icon {
-	display: flex;
-	justify-content: flex-start;
-	font-size: 1.5rem;
-	color: rgba(255, 255, 255, 0.568);
+	padding-bottom: 10px;
 }
 
 .testimonial {
@@ -480,7 +477,7 @@ nav{
 	color: rgb(26, 9, 25);
 	background-color: rgb(231, 210, 231);
 	padding: 12px 20px;
-	margin: 10px;
+	margin: 10px;	
 	text-align: center;
 	display: flex;
 	/* box-shadow: 2px 2px blur; */
