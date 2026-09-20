@@ -585,7 +585,7 @@ footer {
 /* ABOUT PAGE */
 
 .bg-container {
-	height: 100vh;
+	min-height: 100vh;
 }
 
 .bg-container h1 {
