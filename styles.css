@@ -1,5 +1,6 @@
 :root {
 	--DarkPurple: rgb(26, 9, 25);
+	--Purple-Transparent: rgba(43, 17, 43, 0.9);
 	--Purple: purple;
 	--LightPurple: rgb(170, 10, 170);
 	--BabyPurple: rgb(176, 147, 170);
@@ -128,6 +129,9 @@ nav{
 	height: 100vh;
 	transition: 0.4s ease;
 	overflow: scroll;
+	z-index: 10;
+	padding-top: 40px;
+	font-family: "Montserrat", sans-serif;
 }
 
 .cart.active {
@@ -146,9 +150,12 @@ nav{
 .cart-box {
 	display: flex;
   align-items: center;
-	/* flex-direction: column; */
   margin-top: 40px;
 	padding: 10px;
+	margin: 10px;
+	background-color: var(--Purple-Transparent);
+	color: var(--White);
+	border-radius: 10px;
 }
 
 .cart-box img {
@@ -188,6 +195,7 @@ nav{
 	cursor: pointer;
 	border: none;
 	background-color: inherit;
+	color: var(--White);
 }
 
 .product-quantity .actual-amount {
@@ -204,6 +212,25 @@ nav{
 	color: #999;
 }
 
+.total {
+	padding: 10px;
+	font-size: 0.9rem;
+	font-weight: 600;
+}
+
+.total-title {
+	display: inline-block;
+}
+
+.total-price {
+	background-color: green;
+	border-radius: 10px;
+	padding: 0 10px;
+	margin: 5px 0;
+	display: inline-block;
+	color: var(--White);
+}
+
 .final-order-btn {
 	background-color: var(--DarkPurple);
 	color: var(--White);
@@ -211,6 +238,8 @@ nav{
 	border-radius: 12px;
 	border: none;
 	transition: 0.5s ease;
+	margin-top: 5px;
+	font-weight: 600;
 }
 
 .final-order-btn:hover {
