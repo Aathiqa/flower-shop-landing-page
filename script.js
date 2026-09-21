@@ -17,6 +17,20 @@ const cartIcon = document.querySelector("#cart_icon");
 const cart = document.querySelector(".cart");
 const cartClose = document.querySelector("#cart_close");
 
+// if (cartIcon && cart) {
+//   cartIcon.addEventListener("click", () => {
+//     if (hamMenu && hamMenu.classList.contains("active")) {
+//       hamMenu.classList.remove("active");
+//     }
+
+//     if (offScreenMenu && offScreenMenu.classList.contains("active")) {
+//       offScreenMenu.classList.remove("active");
+//     }
+
+//     cart.classList.add("active");
+//   });
+// }
+
 if (cartIcon && cart) {
   cartIcon.addEventListener("click", () => cart.classList.add("active"));
 }
