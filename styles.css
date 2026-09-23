@@ -562,20 +562,17 @@ li {
 	box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
-.testimonial .review {
-	width: fit-content;
+.testimonial-card .review {
 	margin-bottom: 16px;
 }
 
-.testimonial .author {
+.testimonial-card .author {
 	color: var(--Purple);
-	font-weight: 500;
 	font-size: 0.9rem;
-	/* padding-top: 20px; */
+	font-weight: 600;
 }
 
-.testimonial .rating {
-	padding-top: 0;
+.testimonial-card .rating {
 	font-size: 0.8rem;
 }
 
@@ -1039,7 +1036,7 @@ main span {
 
 	.testimonials {
 		min-height: 320px;
-		padding: 0 8testi0px;
+		padding: 0 80px;
 	}
 
 	.testimonial-block {
@@ -1050,17 +1047,16 @@ main span {
 
 	.testimonial-card {
 		min-height: 200px;
-
 	}
 
-	.testimonial .review {
+	.testimonial-card .review {
 		font-size: 1rem;
 		flex-grow: 1;
 	}
 
-	.testimonial .rating-block {
+	/* .testimonial .rating-block {
 		justify-content: flex-end;
-	}
+	} */
 
 } 
 
