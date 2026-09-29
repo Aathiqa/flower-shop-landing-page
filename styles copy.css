@@ -507,6 +507,7 @@ li {
 }
 
 /* sets all images to the same height */
+/* the 'height: 180' here creates uniform slot for the images */
 .img1, .img2, .img3, .img4 {
 	width: 100%;
 	height: 180px;
@@ -514,6 +515,7 @@ li {
 }
 
 /* decides the image zoom in */
+/* 'height: 100%' makes sure the full space of the image slot is used up */
 .grid-container img {
 	width: 100%;
 	height: 100%;
