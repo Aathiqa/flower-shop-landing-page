@@ -330,9 +330,9 @@ li {
 
 .headline {
 	color: rgb(221, 209, 216);
-	font-size: 1.4rem;
+	font-size: 1.6rem;
 	text-align: left;
-	padding: 10px;	
+	padding: 10px;
 }
 
 .headline span {
@@ -348,7 +348,7 @@ li {
 	padding-bottom: 15px;
 	border-radius: 10px;
 	font-size: 1em;
-	font-style: italic;
+	font-style: italic; 
 	min-width: 200px;
 }
 
@@ -1089,6 +1089,20 @@ main span {
 
 	.florist-method {
 		padding: 0 100px;
+	}
+
+	.florist-method h2 {
+		font-size: 1.8rem;
+		padding: 20px 0;
+	}
+
+	.testimonial-block {
+		padding-bottom: 20px;
+	}
+
+	.testimonials h2 {
+		font-size: 1.8rem;
+		padding: 20px 0;
 	}
 
 	footer {
