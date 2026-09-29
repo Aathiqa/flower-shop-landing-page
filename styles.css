@@ -471,6 +471,7 @@ li {
 	padding: 10px 70px;
 	border-radius: 5px;
 	font-weight: 700;
+	font-size: 1rem;
 	margin-bottom: 10px;
 	display: inline-block;
 	transition: 0.5s ease;
@@ -1076,6 +1077,16 @@ main span {
 		font-size: 1rem;
 	}
 
+	.top-products h2 {
+		font-size: 1.8rem;
+		padding: 20px 0;
+	}
+
+	.explore-btn {
+		font-size: 1.2rem;
+		margin: 20px 0;
+	}
+
 	.florist-method {
 		padding: 0 100px;
 	}
@@ -1147,6 +1158,10 @@ main span {
 		width: 130px;
 	} */
 
+	.product-list {
+		padding: 0 40px;
+	}
+
 	.descrip {
 		padding: 10px 100px;
 	}
@@ -1160,8 +1175,16 @@ main span {
 
 @media(min-width: 1440px) {
 
+	.trust-bar {
+		justify-content: space-around;
+	}
+
+	.product-list {
+		padding: 0 200px;
+	}
+
 	.descrip {
-		padding: 10px 120px;
+		padding: 10px 280px;
 	}
 
 	.descrip h2 {
@@ -1170,14 +1193,6 @@ main span {
 
 	.descrip p {
 		font-size: 1.2rem;
-	}
-
-	.trust-bar {
-		justify-content: space-around;
-	}
-
-	.descrip {
-		padding: 10px 280px;
 	}
 
 	.grid-container {
