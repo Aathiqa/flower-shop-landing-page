@@ -18,6 +18,10 @@ body {
 	font-family: "Playfair Display", serif;
 }
 
+main {
+	padding-top: 85px;
+}
+
 ul {
 	list-style: none;
 }
@@ -181,8 +185,9 @@ li {
 
 .cart-box {
 	display: flex;
-  align-items: center;
-  margin-top: 40px;
+  	align-items: center;
+	justify-content: center;
+  	margin-top: 40px;
 	padding: 10px;
 	margin: 10px;
 	background-color: var(--Purple-Transparent);
@@ -192,15 +197,16 @@ li {
 
 .cart-box img {
 	width: 60px;
-  height: 60px;
-  border-radius: 6px;
+  	height: 60px;
+  	border-radius: 6px;
 	border: 1px solid gray;
-  object-fit: cover;
-  margin-right: 20px;
+  	object-fit: cover;
+  	margin-right: 20px;
 }
 
 .cart-box .product-title {
 	font-size: 0.9rem;
+	/* padding-bottom: 5px; */
 	/* margin: 0;
 	padding: 0; */
 }
@@ -212,12 +218,13 @@ li {
 .price-block {
 	display: flex;
 	justify-content: space-between;
+	font-size: 0.9rem;
 }
 
 .product-quantity {
 	display: flex;
-	justify-content: space-between;
-	font-size: 1rem;
+	justify-content: space-around;
+	font-size: 0.9rem;
 	border: 1px solid gray;
 	border-radius: 5px;
 	margin: 10px 0;
@@ -248,6 +255,8 @@ li {
 	padding: 10px;
 	font-size: 0.9rem;
 	font-weight: 600;
+	display: flex;
+	flex-direction: column;
 }
 
 .total-title {
@@ -267,11 +276,13 @@ li {
 	background-color: var(--DarkPurple);
 	color: var(--White);
 	padding: 6px 12px;
-	border-radius: 12px;
+	border-radius: 10px;
 	border: none;
 	transition: 0.5s ease;
-	margin-top: 5px;
+	margin-top: 10px;
 	font-weight: 600;
+	font-size: 0.9rem;
+	width: fit-content;
 }
 
 .final-order-btn:hover {
@@ -658,7 +669,7 @@ footer {
 .bg-container h1 {
 	color: var(--White);
 	text-align: center;
-	margin-top: 60px;
+	margin-top: 80px;
 	font-size: 1.5rem;
 }
 
@@ -675,7 +686,7 @@ footer {
 	justify-content: flex-start;
 	align-items: center;
 	text-align: center;
-	gap: 370px;
+	gap: 200px;
 }
 
 .about-bg .intro {
@@ -683,7 +694,7 @@ footer {
 	font-size: 1rem;
 	padding: 10px;
 	background-color: rgba(62, 5, 62, 0.6);
-	margin: 0 10px;
+	margin: 20px 50px 220px 50px;
 	border-radius: 10px;
 }
 
@@ -699,7 +710,7 @@ footer {
 	position: relative;
 	top: -80px;
 	line-height: 1em;;
-	color: var(--White);
+	color: var(--DarkPurple);
 }
 
 .origin-story span {
@@ -713,11 +724,10 @@ footer {
 	width: 250px;
 	border: 3.5px solid white;
 	position: relative;
-	top: -20px;
+	top: -80px;
 	display: block;
   margin: 0 auto;
 }
-
 
 .origin-story .curly-arrow-icon {
 	position: relative;
@@ -729,7 +739,8 @@ footer {
 	color: var(--White);
 	font-size: 1rem;
 	padding: 10px;
-	background-color: rgb(62, 5, 62);
+	color: var(--DarkPurple);
+	/* background-color: rgb(62, 5, 62); */
 	margin: 0 10px;
 	border-radius: 10px;
 	text-align: center;
@@ -737,7 +748,7 @@ footer {
 }
 
 .soil-bg {
-	background-image:
+	/* background-image:
 		linear-gradient(
 			to bottom,
 			rgba(255, 255, 255, 0.9) 0%,
@@ -750,7 +761,8 @@ footer {
       rgba(255, 255, 255, 0.45) 30%,
       rgba(255, 255, 255, 0) 50%
 		),
-		url("images/loam_soil.jpg");
+		url("images/loam_soil.jpg"); */
+	background-color: var(--DarkPurple);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -765,7 +777,7 @@ footer {
 	padding-top: 40px;
 	padding-left: 40px;
 	line-height: 1em;
-	color: var(--DarkPurple);
+	color: var(--White);
 }
 
 .soil-bg span {
@@ -784,9 +796,10 @@ footer {
 .soil-method {
 	color: var(--White);
 	font-size: 1rem;
-	padding: 10px;
-	background-color: rgba(62, 5, 62, 0.6);
-	backdrop-filter: blur(5px);
+	line-height: 30px;
+	padding: 10px 20px;
+	/* background-color: rgba(62, 5, 62, 0.6);
+	backdrop-filter: blur(5px); */
 	margin: 0 10px;
 	border-radius: 10px;
 	text-align: center;
@@ -846,6 +859,20 @@ footer {
 	text-align: center;
 }
 
+
+/* CONTACT PAGE */
+
+.contact-title {
+	color: var(--White);
+	font-size: 2rem;
+	padding: 20px;
+	text-align: center;
+}
+
+.contact-title span {
+	color: var(--BabyPurple);
+}
+
 .bg-contact {
 	background-color: var(--BabyPurple);
 	height: 600px;
@@ -858,25 +885,23 @@ footer {
 	text-align: center;
 }
 
-main h1 {
-	color: var(--White);
-	font-size: 1.4rem;
-	padding: 20px;
-	text-align: center;
-}
-
-main span {
-	color: var(--BabyPurple);
+.contacts {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 400px;
 }
 
 .email-details, .whatsapp-details {
 	background-color: var(--DarkPurple);
 	color: var(--White);
 	/* font-size: 0.9rem; */
-	max-width: 200px;
+	min-width: 200px;
+	max-width: 400px;
 	min-height: 100px;
 	margin: 20px 0;
-	padding: 10px 0 10px 10px;;
+	padding: 10px;
 }
 
 .contact-icons {
@@ -988,6 +1013,25 @@ main span {
 	.hero-img {
 		height: 450px;
 	}
+
+	.about-bg {
+		display: flex;
+		justify-content: flex-start;
+	}
+
+	.intro {
+		height: 150px;
+		width: 400px;
+		font-size: 1.2rem;
+	}
+
+	.origin-story .messy-flowers {
+		height: auto;
+		width: 100%;
+		padding: 0 60px;
+		border: 5px solid var(--White);
+	}
+
 }
 
 @media(min-width: 500px) {
@@ -1011,6 +1055,42 @@ main span {
 		gap: 20px;
 		display: flex;
 		font-size: 0.9rem;
+	}
+
+	.cart {
+		max-width: 400px;
+	}
+
+	.cart-box {
+		padding: 20px;
+		margin: 20px;
+		align-items: flex-start;
+	}
+
+	.cart-box .cart-box-details {
+		margin-top: 10px;
+	}
+
+	.cart-box img {
+		width: 170px;
+		height: 170px;
+	}
+
+	.cart-box .product-title {
+		font-size: 1.2rem;
+		padding-bottom: 15px;
+	}
+
+	.price-block, .product-quantity {
+		font-size: 1.2rem;
+	}
+
+	.total {
+		font-size: 1.2rem;
+	}
+
+	.final-order-btn {
+		font-size: 1.2rem;
 	}
 
 	.hero-img {
@@ -1054,6 +1134,22 @@ main span {
 
 	.trust-icon {
 		padding-right: 10px;
+	}
+
+	.contact-text {
+		font-size: 1.5rem;
+	}
+
+	.contact-icons {
+		font-size: 2.4rem;
+	}
+
+	.email-details h2, .whatsapp-details h2 {
+		font-size: 1.5rem;
+	}
+
+	.email-details p {
+		font-size: 1.1rem;
 	}
 
 }
@@ -1109,6 +1205,16 @@ main span {
 		font-size: 1rem;
 	}
 
+	.contacts {
+		min-height: 500px;
+	}
+
+	.email-details, .whatsapp-details {
+		min-width: 400px;
+		min-height: 150px;
+		padding: 20px;
+	}
+
 
 }
 
@@ -1142,9 +1248,9 @@ main span {
 		flex-grow: 1;
 	}
 
-	/* .testimonial .rating-block {
-		justify-content: flex-end;
-	} */
+	.bg-contact {
+		margin: 60px 60px 0;
+	}
 
 } 
 
@@ -1189,6 +1295,19 @@ main span {
 
 @media(min-width: 1440px) {
 
+	.cart {
+		min-width: 500px;
+	}
+
+	/* .cart-box {
+		margin: 20px 60px;
+	} */
+
+	.cart-box img{
+		width: 300px;
+		height: 200px;
+	}
+
 	.trust-bar {
 		justify-content: space-around;
 	}
@@ -1211,6 +1330,10 @@ main span {
 
 	.grid-container {
 		padding: 10px 240px;
+	}
+
+	.bg-contact {
+		margin: 100px 100px 0;
 	}
 
 }

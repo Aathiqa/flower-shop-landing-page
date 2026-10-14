@@ -133,7 +133,7 @@ const renderSavedCart = () => {
     cartBox.classList.add("cart-box");
     cartBox.innerHTML = `
       <img src="${item.image}" alt="Cart image">
-      <div>
+      <div class="cart-box-details">
         <h2 class="product-title">${item.title}</h2>
         <div class="price-block">
           <p class="price">${item.price}</p>
