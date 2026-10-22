@@ -1,7 +1,7 @@
 // THE JAVASCRIPT IN THIS PAGE IS AI-GENERATED
 
 const STORAGE_KEY = "flowerShopCart";
-const WHATSAPP_NUMBER = "947757679664";
+const WHATSAPP_NUMBER = "94757679664";
 
 const hamMenu = document.querySelector(".ham-menu");
 const offScreenMenu = document.querySelector(".off-screen-menu");
