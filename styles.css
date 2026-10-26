@@ -15,7 +15,6 @@
   --font-1: clamp(1.067rem, 0.9294rem + 0.8007vw, 1.65rem);
   --font-2: clamp(1.1385rem, 0.9398rem + 1.1557vw, 1.98rem);
   --font-3: clamp(1.2148rem, 0.9407rem + 1.5948vw, 2.376rem);
-  /* --font-4: clamp(1.2962rem, 0.9291rem + 2.1357vw, 2.8512rem); */
   --font-4: clamp(1.383rem, 0.9018rem + 2.7996vw, 3.4214rem);
 }
 
