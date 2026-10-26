@@ -428,7 +428,7 @@ li {
 	padding-bottom: 10px;
 }
 
-.top-products h2 {
+.top-products h3 {
 	color: rgb(63, 22, 60);
 	padding : 10px 0;
 	text-align: center;
@@ -503,7 +503,7 @@ li {
 	text-align: center;
 }
 
-.descrip h2 {
+.descrip h3 {
 	font-weight: 300;
 	font-size: var(--font-3);
 	line-height: 1em;
@@ -547,7 +547,7 @@ li {
 	margin: 20px 0;
 }
 
-.testimonials h2 {
+.testimonials h3 {
 	font-size: var(--font-3);
 	text-align: center;
 	padding: 15px;
@@ -922,7 +922,7 @@ footer {
 	background-color: var(--White);
 }
 
-.bg-products h2 {
+.bg-products h1 {
 	color: var(--DarkPurple);
 	font-size: var(--font-3);
 	font-family: var(--fontFam-heading);
@@ -955,6 +955,7 @@ footer {
 .product .product-name {
 	color: var(--DarkPurple);
 	font-size: var(--font--1);
+	font-weight: 300;
 	padding: 10px;
 }
 
