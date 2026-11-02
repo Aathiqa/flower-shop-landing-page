@@ -1,5 +1,6 @@
 // THE JAVASCRIPT IN THIS PAGE IS AI-GENERATED
 
+// 'flowerShopCart' is the key that is to store the saved cart
 const STORAGE_KEY = "flowerShopCart";
 const WHATSAPP_NUMBER = "94757679664";
 
@@ -41,6 +42,7 @@ if (cartClose && cart) {
 
 const addCartButtons = document.querySelectorAll(".buy-btn");
 const cartContent = document.querySelector(".cart-content");
+let cartItemCount = 0;
 
 // reads the cart
 const getStoredCart = () => {
@@ -48,6 +50,7 @@ const getStoredCart = () => {
 		// getItem reads
 		// what is 'STORAGE_KEY' here?
     const savedCart = localStorage.getItem(STORAGE_KEY);
+    // saved cart in JSON is converted into js
 		// JSON.parse converts a JSON string into a JavaScript
 		// localStorage only stores strings not js
     return savedCart ? JSON.parse(savedCart) : [];
@@ -60,6 +63,8 @@ const getStoredCart = () => {
 const saveCartToStorage = () => {
   if (!cartContent) return;
 
+  // spread operator unpacks element
+  // iterates over each (unpacked) element
   const items = [...cartContent.querySelectorAll(".cart-box")].map(cartBox => ({
     title: cartBox.querySelector(".product-title").textContent,
     price: cartBox.querySelector(".price").textContent,
@@ -99,6 +104,7 @@ const syncCartCount = () => {
     cartItemCountBadge.textContent = cartItemCount;
   } else {
     cartItemCountBadge.style.visibility = "hidden";
+    // this line doesn't seen necessary
     cartItemCountBadge.textContent = "";
   }
 };
@@ -120,6 +126,8 @@ const updateCartTotal = () => {
     total += price * quantity;
   });
 
+  // actual total price (of all products)
+  // 'toFixed(2)' makes sure the number is shown with exactly 2 digits after the decimal point
   totalPrice.textContent = `$${total.toFixed(2)}`;
 };
 
@@ -128,6 +136,7 @@ const renderSavedCart = () => {
 
   const savedCart = getStoredCart();
 
+  // 'item' refers to one cart entry at a time
   savedCart.forEach(item => {
     const cartBox = document.createElement("div");
     cartBox.classList.add("cart-box");
@@ -192,6 +201,7 @@ const renderSavedCart = () => {
 const addToCart = productBox => {
   if (!productBox || !cartContent) return;
 
+  // alert message if contetn already in cart
   const productImgSrc = productBox.querySelector("img").src;
   const productTitle = productBox.querySelector(".product-name").textContent;
   const productPrice = productBox.querySelector(".product-price").textContent;
@@ -204,6 +214,7 @@ const addToCart = productBox => {
     }
   }
 
+  // html for each cart-box in cart
   const cartBox = document.createElement("div");
   cartBox.classList.add("cart-box");
   cartBox.innerHTML = `
@@ -224,6 +235,7 @@ const addToCart = productBox => {
 
   cartContent.appendChild(cartBox);
 
+  // to set the default color of the decement button
   const decrementButton = cartBox.querySelector("#decrement");
   if (decrementButton) {
     decrementButton.style.color = "#999";
@@ -236,6 +248,7 @@ const addToCart = productBox => {
     saveCartToStorage();
   });
 
+  // color changes of decrment and increment button
   cartBox.querySelector(".product-quantity").addEventListener("click", event => {
     const number = cartBox.querySelector(".actual-amount");
     const decrementButton = cartBox.querySelector("#decrement");
@@ -264,16 +277,17 @@ const addToCart = productBox => {
   saveCartToStorage();
 };
 
+// to add the respectve product (of the 'Add to Cart' button clicked) into the cart
 if (addCartButtons.length) {
   addCartButtons.forEach(button => {
     button.addEventListener("click", event => {
+      event.preventDefault();
+
       const productBox = event.target.closest(".product");
       addToCart(productBox);
     });
   });
 }
-
-let cartItemCount = 0;
 
 const buildWhatsAppOrderMessage = () => {
   const cartBoxes = cartContent.querySelectorAll(".cart-box");
