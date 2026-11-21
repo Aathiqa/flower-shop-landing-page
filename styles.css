@@ -95,6 +95,7 @@ li {
 	z-index: 10;
 	display: block;
 	margin-left: 10px;
+	cursor: pointer;
 }
 
 .ham-menu span {
@@ -147,6 +148,7 @@ li {
 	margin: 15px;
 	display: inline-block;
 	position: relative;
+	cursor: pointer;
 }
 
 .cart-item-count {
@@ -196,9 +198,9 @@ li {
 
 .cart-box {
 	display: flex;
-  align-items: center;
+  	align-items: center;
 	justify-content: center;
-  margin-top: 40px;
+  	margin-top: 40px;
 	padding: 10px;
 	margin: 10px;
 	background-color: var(--Purple-Transparent);
@@ -291,6 +293,7 @@ li {
 	font-weight: 600;
 	font-size: var(--font-0);
 	width: fit-content;
+	cursor: pointer;
 }
 
 .final-order-btn:hover {
@@ -299,7 +302,6 @@ li {
 
 .off-screen-menu {
 	background-color: var(--White);
-	color: var(--DarkPurple);
 	font-size: var(--font-0);
 	position: fixed;
 	top: 0;
@@ -308,16 +310,19 @@ li {
 	max-width: 200px;
 	height: 100vh;
 	display: flex;
-  justify-content: center;
-  text-align: center;
+  	justify-content: center;
+  	text-align: center;
 	padding-top: 60px;
 	gap: 40px;
-	/* z-index: 2; */
 	line-height: 2rem;
 	transition: 0.4s ease;
 }
 
-.off-screen-menu li:hover {
+.off-screen-menu a {
+	color: var(--DarkPurple);
+}
+
+.off-screen-menu a:hover {
 	color: var(--Purple);
 }
 
