@@ -206,13 +206,21 @@ const addToCart = productBox => {
   const productTitle = productBox.querySelector(".product-name").textContent;
   const productPrice = productBox.querySelector(".product-price").textContent;
 
-  const cartItems = cartContent.querySelectorAll(".product-title");
-  for (let item of cartItems) {
-    if (item.textContent === productTitle) {
-      alert("This item is already in the cart.");
-      return;
-    }
+  // const cartItems = cartContent.querySelectorAll(".product-title");
+  // for (let item of cartItems) {
+  //   if (item.textContent === productTitle) {
+  //     alert("This item is already in the cart.");
+  //     return;
+  //   }
+  // }
+
+  function showToast(message) {
+    const toast = document.getElementById("toast");
+    toast.textContent = message;
+    toast.classList.add("show");
+    setTimeout(() => toast.classList.remove("show"), 2500);
   }
+  showToast("This item is already in the cart.");
 
   // html for each cart-box in cart
   const cartBox = document.createElement("div");
