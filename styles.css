@@ -313,7 +313,7 @@ li {
 	display: flex;
   	justify-content: center;
   	text-align: center;
-	padding-top: 60px;
+	padding-top: 100px;
 	gap: 40px;
 	line-height: 2rem;
 	transition: 0.4s ease;
@@ -329,6 +329,7 @@ li {
 
 .off-screen-menu.active {
 	right: 0;
+	/* top: 20px; */
 }
 
 .hero-img {
